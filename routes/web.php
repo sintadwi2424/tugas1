@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'SiswaController@index');
+Route::post('/siswa/import_excel', 'SiswaController@import');
+
+
+Route::get('/tampildata', 'SiswaController@tampildata')->name('tampildata');
